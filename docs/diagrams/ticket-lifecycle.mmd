@@ -1,0 +1,15 @@
+stateDiagram-v2
+ [*] --> AI
+ AI --> Human: handoff
+ AI --> Waiting: response
+ Human --> Waiting: response
+ Waiting --> AI: clarification
+ Waiting --> Human: follow-up
+ Waiting --> Completed: confirmation
+ AI --> Completed: confirmation
+ Human --> Completed: confirmation
+ AI --> Cancelled: requester cancels
+ Human --> Cancelled: requester cancels
+ Waiting --> Cancelled: requester cancels
+ Completed --> Human: authorized reopen
+ Cancelled --> Human: authorized reopen
