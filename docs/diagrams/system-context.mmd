@@ -1,0 +1,8 @@
+flowchart LR
+ R[Requester] --> W[Web application]
+ A[Agent and Admin] --> W
+ M[Master] --> W
+ W --> B[FastAPI]
+ B --> D[(PostgreSQL and pgvector)]
+ B --> N[Notion]
+ B --> P[AI providers]
