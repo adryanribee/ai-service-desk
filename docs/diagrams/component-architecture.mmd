@@ -1,0 +1,10 @@
+flowchart TD
+ API[FastAPI REST and SSE] --> I[Identity and authorization]
+ API --> T[Ticket service]
+ T --> R[Routing and SLA]
+ T --> A[AI orchestration]
+ A --> K[Knowledge retrieval]
+ A --> P[Provider adapters]
+ K --> V[(pgvector)]
+ T --> DB[(PostgreSQL)]
+ T --> E[Audit and notifications]
