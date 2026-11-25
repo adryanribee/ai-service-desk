@@ -1,0 +1,12 @@
+flowchart TD
+ A[Message and protocol] --> B[Classify and retrieve]
+ B --> C{Sufficient evidence?}
+ C -->|Yes and no action needed| D[Grounded answer]
+ C -->|No or action required| E[Department queue]
+ B -->|Ambiguous| F[Clarify]
+ F --> B
+ D --> G[Await confirmation]
+ E --> H[Human response with full history]
+ H --> G
+ G -->|Confirmed| I[Complete]
+ G -->|Not resolved| J[Continue with current support mode]
