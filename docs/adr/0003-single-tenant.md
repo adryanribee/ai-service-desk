@@ -1,0 +1,2 @@
+# ADR 0003 — Independent installations
+Accepted. Each organization installs and controls its own data and Master account; no centralized privileged developer account. MIT source distribution with paid deployment/support services permitted. Shared multi-tenant SaaS deferred.
