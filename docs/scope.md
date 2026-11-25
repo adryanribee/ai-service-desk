@@ -1,6 +1,6 @@
 # AI Service Desk — Product scope
 
-Status: Approved scope; detailed requirements and acceptance criteria remain under elicitation.
+Status: Approved product scope; detailed planning baseline submitted for review.
 
 ## 1. Product vision
 
@@ -13,16 +13,16 @@ The goal is to deliver an efficient, maintainable portfolio project that demonst
 | ID | Capability | Scope |
 | --- | --- | --- |
 | SC-01 | Deployment | One independent installation per organization; no shared multi-tenant instance. |
-| SC-02 | Initial setup | First-run configuration for the organization, initial administrator and departments. No mandatory predefined departments. |
+| SC-02 | Initial setup | First-run configuration for the organization, initial Master, administrators and departments. No mandatory predefined departments. |
 | SC-03 | Branding | Configurable service desk name, logo and colors. |
 | SC-04 | Access | Internal staff and external customers may use the platform by invitation only; public self-registration is excluded. |
 | SC-05 | Channel | Web application with a conversational chat interface as the sole request entry channel. |
 | SC-06 | Attachments | Users can attach images and documents to conversations. Supported formats, limits and storage policies are to be defined. |
 | SC-07 | AI triage | Interpret requests, classify them using organization-configured departments and route actionable requests to the appropriate team. |
 | SC-08 | Knowledge base | Notion is the sole knowledge source for the MVP. Document ingestion, vector indexing and retrieval support grounded answers with traceable sources. |
-| SC-09 | Human support | Department-specific access and workspace to receive, respond to and transfer requests. Detailed human closure permissions remain to be defined. |
+| SC-09 | Human support | Department-specific access and workspace to receive, respond to and transfer requests. Agents require requester confirmation; administrators may override with an audited reason. |
 | SC-10 | Resolution | AI may close a request only after an explicit, unambiguous confirmation of successful resolution from the requester. Ambiguous acknowledgements require clarification. |
-| SC-11 | AI provider | Configurable AI provider rather than a hard dependency on OpenAI; supported providers and embedding compatibility are to be defined. |
+| SC-11 | AI provider | Configurable AI provider rather than a hard dependency on OpenAI; OpenAI, Gemini and Ollama recommended; compatible custom providers and separate embedding configuration. |
 | SC-12 | Language | Portuguese user interface and support interactions. |
 | SC-13 | History | Preserve request and conversation history with appropriate access controls and auditability. |
 
@@ -39,8 +39,6 @@ The goal is to deliver an efficient, maintainable portfolio project that demonst
 
 Statements such as “Funcionou perfeitamente” or “Meu problema foi resolvido” may confirm resolution in context. “Obrigado”, “Vou tentar” and partial success are not sufficient. Failed or uncertain requests remain open for continued support or human escalation. The closure action must be enforced by application rules rather than keyword matching alone.
 
-## 5. Open decisions
+## 5. Detailed planning baseline
 
-Detailed roles and permissions, invitation delivery mechanism, ticket lifecycle and human closure policy, attachment storage and security, supported AI providers and models, Notion access boundaries, performance targets and acceptance tests remain to be specified. Operational measurements may be collected for engineering evaluation without implementing a user-facing analytics dashboard.
-
-Public demonstrations must use fictitious data and omit credentials. No performance or accuracy claims are made until measured.
+See [requirements](requirements.md), [business rules](business-rules.md), [workflows](workflows.md), [architecture](architecture.md), [API contracts](api-contracts.md), [use cases](use-cases.md) and [acceptance criteria](acceptance-criteria.md). Additional approved scope: five active chats, four base roles including Master, editable messages with revisions, streaming, attachment interpretation, queues, SLA, in-app notifications, custom statuses, feedback, final summary, no automatic expiry, local/cloud deployment, MIT source with paid services. Audio and external notifications are outside MVP. Detailed operational limits and thresholds remain open. Public demonstrations use fictitious data only.
