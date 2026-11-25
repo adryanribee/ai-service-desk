@@ -1,0 +1,2 @@
+# ADR 0001 — Technology stack
+Accepted baseline: Python/FastAPI, React/TypeScript/Tailwind, PostgreSQL/pgvector, SQLAlchemy/Alembic, Pydantic, Docker Compose and GitHub Actions. Python selected for AI ecosystem; Node/TypeScript viable alternative. No performance superiority claimed without benchmarks. Redis/Celery deferred; Vite, REST/SSE and pinned dependencies are proposed implementation defaults.
