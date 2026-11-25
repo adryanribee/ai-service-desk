@@ -2,6 +2,10 @@
 
 All items below are planned verification, not passed tests. Product owner approves final release after evidence review.
 
+## Planning approval
+
+The product owner approved the planning baseline and release criteria on 2026-11-24 (America/Sao_Paulo), authorizing the foundation phase. This is not approval to publish the MVP, nor evidence that any acceptance test has passed. Final release approval remains a separate gate.
+
 ## Definition of Done
 - [ ] Requirement and implementation traceable; code reviewed, tests and lint pass, documentation updated; evidence linked in Notion.
 - [ ] No unresolved critical security or correctness issue; known limitations documented.
