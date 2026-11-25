@@ -1,0 +1,10 @@
+flowchart LR
+ N[Notion authorized sources] --> S[Manual or scheduled sync]
+ S --> C[Normalize and chunk]
+ C --> E[Embedding provider]
+ E --> V[(Scoped vector index)]
+ Q[Request] --> F[Authorization filter]
+ F --> V
+ V --> R[Retrieved evidence]
+ R --> G[Generation provider]
+ G --> A[Answer with safe source label or escalate]
