@@ -1,0 +1,2 @@
+# ADR 0002 — Modular monolith
+Accepted. One backend deployment, explicit module boundaries and typed interfaces. Avoid distributed operational overhead of microservices for MVP. Extraction remains possible if measured need arises.
