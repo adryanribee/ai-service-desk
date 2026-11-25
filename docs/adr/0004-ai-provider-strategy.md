@@ -1,0 +1,2 @@
+# ADR 0004 — Configurable AI providers
+Accepted: recommended OpenAI, Gemini and Ollama, plus custom compatible APIs. Organization supplies credentials and selects generation/embedding models independently. Use adapters and capability checks; no promise of arbitrary provider compatibility. Direct RAG pipeline proposed instead of unnecessary framework. Reindex when embedding model/dimension changes.
